@@ -37,21 +37,20 @@
           <source>21</source>
           <target>21</target>
         </configuration>
-      </plugin>
-                    <plugin>
-                   <groupId>org.apache.maven.plugins</groupId>
-                   <artifactId>maven-war-plugin</artifactId>
-                   <version>3.3.2</version>
-                   <configuration>
-                       <failOnMissingWebXml>false</failOnMissingWebXml>
-                   </configuration>
-              </plugin>
-      <plugin>
+      
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-war-plugin</artifactId>
+             <configuration>
+         <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+         </configuration>
+         </plugin>
+
 
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
